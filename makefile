@@ -1,10 +1,15 @@
 DOC=cheatsheet
 TEXCC=rubber -d
 
-%.pdf: %.tex
-	 $(TEXCC) $<
+tex_files:=$(shell find . -iname '*.tex')
 
-all: $(DOC).pdf
+#%.pdf: %.tex
+#	 $(TEXCC) $<
+
+$(DOC).pdf: $(tex_files)
+	$(TEXCC) $(DOC).tex
+
+all: $(DOC).pdf $(tex_files)
 
 clean:
 	rubber --clean $(DOC).tex
