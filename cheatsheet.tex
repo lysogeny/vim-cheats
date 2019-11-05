@@ -17,154 +17,19 @@
 \section*{Cheats}
 
 \begin{minipage}[t]{0.33\textwidth}
-  \subsection*{Nvim-R}
-  \begin{tabular}{l l}
-    \toprule
-    Command               & function            \\
-    \midrule
-    \rcmd{b[beda]}        & run block           \\
-    \rcmd{s[seda]}        & run selection       \\
-    \rcmd{p[peda]}        & run paragraph       \\
-    \rcmd{c[cedah]}       & run chunk           \\
-    \rcmd{a[ae]}          & run file            \\
-    \rcmd{l}              & run line            \\
-    \rcmd{d}              & run down            \\
-    \rcmd{su}             & run all lines above \\
-    \rcmd{r$\rightarrow$} & run right           \\
-    \rcmd{r$\leftarrow$}  & run left            \\
-    \rcmd{xx}             & toggle comment      \\
-    \rcmd{g[nN]}          & next/previous chunk \\
-    \midrule
-    \midrule
-    Command               & function            \\
-    \midrule
-    \rcmd{rf}             & start r             \\
-    \rcmd{rl}             & run \texttt{ls()}   \\
-    \rcmd{rr}             & clear console       \\
-    \rcmd{rm}             & clear objects       \\
-    \rcmd{rp}             & print               \\
-    \rcmd{rh}             & help                \\
-    \rcmd{ro}             & object browser      \\
-    \midrule
-    \midrule
-    Command               & function            \\
-    \midrule
-    \rcmd{kh}             & knit html           \\
-    \rcmd{kp}             & knit pdf            \\
-    \rcmd{ko}             & knit odt            \\
-    \midrule
-    \midrule
-    suffix                & meaning             \\
-    \midrule
-    same                  & ---                 \\
-    \texttt{e}            & echo                \\
-    \texttt{d}            & down                \\
-    \texttt{a}            & echo and down       \\
-    \texttt{h}            & first chunk to here \\
-    \bottomrule
-  \end{tabular}
+  \input{nvim-r.tex}
 \end{minipage}
 %
 \begin{minipage}[t]{0.33\textwidth}
-  \subsection*{Vimtex}
-  \begin{tabular}{l l}
-    \toprule
-    Command                   & function       \\
-    \midrule
-    \texttt{[[ [] ][ ]]}      & move section   \\
-    \texttt{[m [m ]m ]m}      & move environ   \\
-    \texttt{[* ]*}            & move comment   \\
-    \texttt{ds[ced\$]}        & delete environ \\
-    \midrule
-    \midrule
-    object                    & meaning        \\
-    \midrule
-    \texttt{ae} \texttt{ie}   & environ        \\
-    \texttt{ad} \texttt{id}   & delimiter      \\
-    \texttt{ic} \texttt{ac}   & Command        \\
-    \texttt{i\$} \texttt{a\$} & inline math    \\
-    \texttt{ip} \texttt{ap}   & section        \\
-    \bottomrule
-  \end{tabular}
-  \subsection*{Slime}
-  \begin{tabular}{l l}
-    \toprule
-    Command & Function \\
-    \midrule
-    \kc{C-c}\kc{C-c} & Run (sel, cur)\\
-    \kc{C-c}\kc{C-v} & Config\\
-    \bottomrule
-  \end{tabular}
-  \subsection*{Julia}
-  \begin{tabular}{l l}
-    \toprule
-    Command        & Function            \\
-    \midrule
-    \texttt{K}     & Documentation       \\
-    \texttt{[j ]j} & previous/next begin \\
-    \texttt{[J ]J} & previous/next end   \\
-    \midrule
-    \midrule
-    Object         & Meaning             \\
-    \midrule
-    \texttt{aj ij} & blocks              \\
-    \bottomrule
-  \end{tabular}
+  \input{vimtex.tex}
+  \input{slime.tex}
+  \input{julia.tex}
 \end{minipage}
 %
 \begin{minipage}[t]{0.33\textwidth}
-  \subsection*{Align}
-  \begin{tabular}{l l}
-    \toprule
-    Command     & function               \\
-    \midrule
-    \rcmd{tt}   & align tabular          \\
-    \rcmd{t=}   & align assignments      \\
-    \rcmd{t|}   & align bar              \\
-    \rcmd{tsp}  & align whitespace       \\
-    \rcmd{htd}  & align \texttt{<table>} \\
-    \bottomrule
-  \end{tabular}
-  \subsection*{Python}
-  \begin{tabular}{l l}
-    \toprule
-    Object                  & Function        \\
-    \midrule
-    \texttt{iM} \texttt{aM} & Method          \\
-    \texttt{iC} \texttt{aC} & Class           \\
-    \midrule
-    \midrule
-    Command                 & Meaning         \\
-    \midrule
-    \texttt{K}              & Documentation   \\
-    \kc{C-c}\texttt{d}      & Documentation   \\
-    \kc{C-c}\texttt{rr}     & rename          \\
-    \kc{C-c}\texttt{ro}     & organise import \\
-    \kc{C-c}\texttt{r1r}    & rename module   \\
-    \kc{C-c}\texttt{r1p}    & module to pkg   \\
-    \kc{C-c}\texttt{g}      & goto def        \\
-    \rcmd{b}                & insert break    \\
-    \rcmd{r}                & run             \\
-    \bottomrule
-  \end{tabular}
-  \subsection*{NERDTree}
- \begin{tabular}{l l}
-    \toprule
-    Function      & Meaning           \\
-    \midrule
-    \texttt{CD}   & change tree root  \\
-    \texttt{cd}   & change wd         \\
-    \texttt{m}    & menu              \\
-    \texttt{o go} & open              \\
-    \texttt{t T}  & open tab          \\
-    \texttt{i gi} & split             \\
-    \texttt{s gs} & vsplit            \\
-    \texttt{I}    & toggle hidden     \\
-    \texttt{r R}  & recursive refresh \\
-    \texttt{q}    & close             \\
-    \texttt{?}    & help              \\
-    \bottomrule
-  \end{tabular}
+  \input{align.tex}
+  \input{python.tex}
+  \input{nerdtree.tex}
 \end{minipage}
 
 \end{document}
