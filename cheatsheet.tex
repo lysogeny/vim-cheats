@@ -9,7 +9,8 @@
 \usepackage{booktabs}
 \usepackage{hyperref}
 
-\newcommand{\rcmd}[1]{\texttt{\textbackslash #1}}
+\newcommand{\leader}{\texttt{\textless leader\textgreater}}
+\newcommand{\lcmd}[1]{\texttt{\leader #1}}
 \newcommand{\kc}[1]{\texttt{\textless #1\textgreater}}
 
 \begin{document}
@@ -17,19 +18,19 @@
 \section*{Cheats}
 
 \begin{minipage}[t]{0.33\textwidth}
-  \input{nvim-r.tex}
+    \input{telescope.tex}
+    \input{nvim-tree.tex}
 \end{minipage}
 %
 \begin{minipage}[t]{0.33\textwidth}
-  \input{vimtex.tex}
-  \input{slime.tex}
-  \input{julia.tex}
+    \input{lspzero.tex}
+    \input{gitsigns.tex}
+    \input{treesitter.tex}
 \end{minipage}
 %
 \begin{minipage}[t]{0.33\textwidth}
-  \input{align.tex}
-  \input{python.tex}
-  \input{nerdtree.tex}
+    \input{comment.tex}
+    \input{iron.tex}
 \end{minipage}
 
 \end{document}
